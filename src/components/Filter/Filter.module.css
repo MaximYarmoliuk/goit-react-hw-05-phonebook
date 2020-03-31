@@ -1,0 +1,22 @@
+.container {
+  margin-top: 20px;
+  width: 400px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 10px solid transparent;
+  border-image: linear-gradient(to right, transparent 0%, #adf2f7 100%);
+  border-image-slice: 1;
+}
+
+.label {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+}
+
+.input {
+  width: 350px;
+  border-radius: 2px;
+}

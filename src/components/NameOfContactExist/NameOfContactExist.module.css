@@ -1,0 +1,16 @@
+.text {
+  position: absolute;
+  width: 400px;
+  height: 80px;
+  right: 50px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid transparent;
+  border-image: linear-gradient(to right, transparent 0%, #800a24 100%);
+  border-image-slice: 1;
+  border-radius: 15px;
+  box-sizing: border-box;
+  text-shadow: 0 0 21px rgba(223, 206, 228, 0.5), 0 -1px 0 #ffffff;
+}
