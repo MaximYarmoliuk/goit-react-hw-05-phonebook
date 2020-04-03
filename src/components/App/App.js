@@ -5,9 +5,8 @@ import withTheme from "../../hoc/withTheme";
 import ContactForm from ".././ContactForm/ContactForm";
 import ContactList from ".././ContactList/ContactList";
 import Filter from ".././Filter/Filter";
-import contactsSelector from "../../redux/contacts/contactsSelectors";
 import AppBar from ".././AppBar/AppBar";
-import contactsOperation from "../../redux/contacts/contactsOperations";
+import { contactsOperations, contactsSelectors } from "../../redux/contacts";
 import styles from "./App.module.css";
 import contactListStyles from "./ContactListStyles.module.css";
 import filterStyles from "./FilterStyles.module.css";
@@ -65,12 +64,12 @@ class App extends Component {
 }
 
 const mapStateToProps = state => ({
-  contacts: contactsSelector.getContacts(state),
+  contacts: contactsSelectors.getContacts(state),
   isLoadingContacts: state.contacts.loading
 });
 
 const mapDispatchToProps = {
-  onFetchContacts: contactsOperation.fetchContacts
+  onFetchContacts: contactsOperations.fetchContacts
 };
 
 export default withTheme(connect(mapStateToProps, mapDispatchToProps)(App));

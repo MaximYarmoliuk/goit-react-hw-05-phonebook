@@ -1,10 +1,10 @@
-import contactActions from "./contactsAction";
+import contactActions from "./contactsActions";
 import axios from "axios";
 
-const ownerId = "f9f2a270-49b1-45db-b304-75c015e05a15";
+const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTg3MTg5OGNiMjc5MTAwMTc4MDMzZjAiLCJpYXQiOjE1ODU5MTE5NjB9.p3YX2CofMChqS9NlGGl4i-jzupaHLdzlBNGhfZeQ8K8"
 
-axios.defaults.baseURL = "https://goit-phonebook-api.herokuapp.com/v1";
-axios.defaults.headers["Authorization"] = ownerId;
+axios.defaults.baseURL = "https://goit-phonebook-api.herokuapp.com";
+axios.defaults.headers["Authorization"] = token;
 axios.defaults.headers.post["Content-Type"] = "application/json";
 
 const addContact = ({ name, number }) => dispatch => {

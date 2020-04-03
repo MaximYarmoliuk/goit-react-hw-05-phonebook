@@ -1,13 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { CSSTransition } from "react-transition-group";
-import contactsOperations from "../../redux/contacts/contactsOperations";
-import contactsSelectors from "../../redux/contacts/contactsSelectors";
+import { contactsOperations, contactsSelectors } from "../../redux/contacts";
 import NameofContactExist from "../NameOfContactExist/NameOfContactExist";
 import FillInEntryFields from "../FillInEntryFields/FillInEntryFields";
 import styles from "./ContactForm.module.css";
 import nameExistStyles from "./NameExist.module.css";
-import entryFieldsStyles from './FillInEntryFields.module.css'
+import entryFieldsStyles from "./FillInEntryFields.module.css";
 
 class ContactForm extends Component {
   state = {
